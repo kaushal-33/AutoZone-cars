@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoZone-Cars</title>
+    <!-- bootstrao css link -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!--style css link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- fontawesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- swiper slider css link -->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <!-- AOS css link -->
+    <link rel="stylesheet" href="./assets/css/aos.min.css">
+</head>
+
+<body>
+    <!-- loader -->
+    <div id="loader-wrapper" class="">
+        <div class="loader">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="subline"></div>
+            <div class="subline"></div>
+            <div class="subline"></div>
+            <div class="subline"></div>
+            <div class="subline"></div>
+            <div class="loader-circle-1">
+                <div class="loader-circle-2"></div>
+            </div>
+            <div class="needle"></div>
+            <div class="loading">Loading</div>
+        </div>
+    </div>
+    <header class="position-absolute w-100 z-2">
+        <!-- sub header -->
+        <div class="py-3 px-3 d-flex justify-content-between border-bottom border-black border-opacity-25 shadow"
+            id="sub-header">
+            <div class="container d-flex justify-content-center justify-content-sm-between">
+                <ul class="d-flex gap-3 m-0 p-0">
+                    <li class="d-flex align-items-center gap-2 fs-sm text-white c-pointer hover-primary">
+                        <span><i class="fa-solid fa-phone"></i></span>+8564785285
+                    </li>
+                    <li class="d-flex align-items-center gap-2 fs-sm text-white c-pointer hover-primary">
+                        <span><i class="fa-solid fa-envelope"></i></span>autozone@gmail.com
+                    </li>
+                </ul>
+                <ul class="m-0 p-0 d-none d-sm-flex align-items-center gap-4">
+                    <li class="c-pointer"><span class="fs-sm text-white hover-primary"><i
+                                class="fa-brands fa-facebook-f"></i></span>
+                    </li>
+                    <li class="c-pointer"><span class="fs-sm text-white hover-primary"><i
+                                class="fa-brands fa-x-twitter"></i></span>
+                    </li>
+                    <li class="c-pointer"><span class="fs-sm text-white hover-primary"><i
+                                class="fa-brands fa-instagram"></i></span>
+                    </li>
+                    <li class="c-pointer"><span class="fs-sm text-white hover-primary"><i
+                                class="fa-brands fa-youtube"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <!-- main-header -->
+            <nav class="navbar navbar-expand-lg justify-content-between align-items-center py-3 px-3">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/images/big-logo-b.png" alt="Logo" width="100px"
+                        style="filter: invert(1); filter: brightness(100);">
+                </a>
+                <div class="d-flex align-items-center gap-5">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav align-items-center me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link fs-sm text-white fw-bold hover-linear" aria-current="page"
+                                    href="./index.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-sm text-white fw-bold hover-linear" href="./our-cars.html">OUR
+                                    CARS</a>
+                            </li>
+                            <!-- dropdown-news -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle fs-sm text-white fw-bold hover-linear" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    OUR NEWS
+                                </a>
+                                <ul class="dropdown-menu border-0 hero-bg shadow">
+                                    <li><a class="dropdown-item" href="./blogs.html">Blogs</a></li>
+                                    <li><a class="dropdown-item" href="./testimonial.html">Testimonials</a></li>
+                                    <li><a class="dropdown-item" href="#">More...</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-sm text-white fw-bold hover-linear"
+                                    href="./contact.html">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn d-none d-sm-block border-white border-opacity-25 rounded-0">
+                        <span class="fs-sm text-white fw-bold">SELL YOUR CAR</span>
+                    </button>
+                    <button class="btn border border-white border-opacity-25 focus-none d-lg-none rounded-0"
+                        type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                        aria-controls="offcanvasExample">
+                        <span class="text-white"><i class="fa-solid fa-bars"></i></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <!-- mobile header -->
+        <div class="offcanvas hero-bg offcanvas-start shadow-lg" tabindex="-1" id="offcanvasExample">
+            <div class="offcanvas-header d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/images/big-logo-b.png" alt="Logo" width="100px"
+                        style="filter: invert(1); filter: brightness(100);">
+                </a>
+                <button type="button" class="border border-white border-opacity-25 rounded-0 btn"
+                    data-bs-dismiss="offcanvas" aria-label="Close">
+                    <span class="text-white"><i class="fa-solid fa-xmark"></i></span></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="m-0 p-0">
+                    <li class=" hover-linear c-pointer mb-3 fw-bold">
+                        <a class="fs-sm text-white" href="./index.html">HOME</a>
+                    </li>
+                    <li class="hover-linear c-pointer mb-3 fw-bold">
+                        <a class="fs-sm text-start text-white" href="./our-cars.html">OUR CARS</a>
+                    </li>
+                    <!-- dropdown-news -->
+                    <li class="dropdown hover-linear c-pointer mb-3 fw-bold">
+                        <a class=" dropdown-toggle fs-sm text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            OUR NEWS
+                        </a>
+                        <ul class="dropdown-menu border-1 border-white hero-bg shadow w-100">
+                            <li><a class="dropdown-item text-white" href="./blogs.html">Blogs</a></li>
+                            <li><a class="dropdown-item text-white" href="./testimonial.html">Testimonials</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-white" href="#">More...</a></li>
+                        </ul>
+                    </li>
+                    <li class=" hover-linear c-pointer mb-3 fw-bold">
+                        <a class=" fs-sm text-white" href="./contact.html">CONTACT</a>
+                    </li>
+                </ul>
+                <button class="btn border-white border-opacity-50 rounded-0 mt-5 w-100">
+                    <span class="fs-sm text-white fw-bold">SELL YOUR CAR</span>
+                </button>
+                <ul class="m-0 p-0 d-flex gap-5 justify-content-center mt-5 pt-5">
+                    <li class="c-pointer"><span class="text-white hover-primary"><i
+                                class="fa-brands fa-facebook-f"></i></span>
+                    </li>
+                    <li class="c-pointer"><span class="text-white hover-primary"><i
+                                class="fa-brands fa-x-twitter"></i></span>
+                    </li>
+                    <li class="c-pointer"><span class="text-white hover-primary"><i
+                                class="fa-brands fa-instagram"></i></span>
+                    </li>
+                    <li class="c-pointer"><span class="text-white hover-primary"><i
+                                class="fa-brands fa-youtube"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="our-car-section py-100 position-relative">
+            <div class="position-relative z-0">
+                <h2 class="text-white text-center fs-1 fw-bold text-uppercase mt-5 pt-4 footer-logo">blogs</h2>
+            </div>
+            <ul class="breadcrumb d-flex justify-content-center mt-5 text-white position-relative z-0">
+                <li class="breadcrumb-item">
+                    <a href="./index.html" class="text-white fs-sm opacity-50">HOME</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="./our-cars.html" class="text-white fs-sm opacity-50">OUR NEWS</a>
+                </li>
+                <li class="breadcrumb-item active">
+                    <a href="./our-cars.html" class="text-white fs-sm opacity-75">BLOGS</a>
+                </li>
+            </ul>
+            <div class="block-cream position-relative"></div>
+        </section>
+        <section class="py-100 bg-cream">
+            <div class="container">
+                <div class="row gy-4 position-relative">
+                    <!-- blog 1 -->
+                    <div class="col-lg-8">
+                        <div class="shadow">
+                            <div class="position-relative">
+                                <img src="./assets/images/ford.webp" alt="" class="img-fluid">
+                                <div class="position-absolute date">
+                                    <p
+                                        class="text-white text-uppercase fs-sm m-0 pe-4 text-center position-relative z-1">
+                                        19</p>
+                                    <p
+                                        class="text-white text-uppercase fs-sm m-0 pe-3 text-center position-relative z-1">
+                                        oct</p>
+                                </div>
+                            </div>
+                            <div class="p-5 bg-white">
+                                <h6 class="text-uppercase fs-5 fw-bold border-start border-danger ps-2 border-5 mb-3">
+                                    Ford
+                                    Tourneo Courier review</h6>
+                                <p class="ps-3 mb-4 text-secondary">
+                                    Were. Every forth one male man which. Brought won’t divide in. Hath gathering. Have.
+                                    Open fifth face shall land fish kind isn’t let can’t blessed multiply third light,
+                                    shall from winged, his creature isn’t midst said dominion in. Male firmament
+                                    beginning dominion fourth he place shall.
+                                </p>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <button
+                                            class="bg-white border-0 text-uppercase py-2 ms-4 position-relative read-more-btn w-100">
+                                            <span class="fs-very-sm position-relative z-1 text-white">read more</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div>
+                                            <ul
+                                                class="share-btn d-inline-block py-3 position-relative w-sm-50 w-100 d-flex gap-3   align-items-center position-relative z-0">
+                                                <li class="text-uppercase fs-very-sm text-white">share this</li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-brands fa-facebook"></i></span>
+                                                </li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-brands fa-x-twitter"></i></span>
+                                                </li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-solid fa-envelope"></i></span>
+                                                </li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-solid fa-plus"></i></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- meta registration links -->
+                    <div class="col-4 d-none d-lg-block">
+                        <div class="bg-white p-4 position-sticky top-0 shadow">
+                            <ul class="m-0 p-0">
+                                <li class="text-uppercase fw-bold mb-2 border-start border-5 border-secondary ps-3">meta
+                                </li>
+                                <li
+                                    class="text-uppercase ps-4 fs-very-sm c-pointer border-bottom py-2 text-secondary meta">
+                                    Register</li>
+                                <li
+                                    class="text-uppercase ps-4 fs-very-sm c-pointer border-bottom py-2 text-secondary meta">
+                                    log in</li>
+                                <li
+                                    class="text-uppercase ps-4 fs-very-sm c-pointer border-bottom py-2 text-secondary meta">
+                                    Entries feed</li>
+                                <li
+                                    class="text-uppercase ps-4 fs-very-sm c-pointer border-bottom py-2 text-secondary meta">
+                                    Comments feed</li>
+                                <li
+                                    class="text-uppercase ps-4 fs-very-sm c-pointer border-bottom py-2 text-secondary meta">
+                                    bootstrap.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- blog 2 -->
+                    <div class="col-lg-8">
+                        <div class="shadow">
+                            <div class="position-relative">
+                                <img src="./assets/images/audirs.jpg" alt="" class="img-fluid">
+                                <div class="position-absolute date">
+                                    <p
+                                        class="text-white text-uppercase fs-sm m-0 pe-4 text-center position-relative z-1">
+                                        29</p>
+                                    <p
+                                        class="text-white text-uppercase fs-sm m-0 pe-3 text-center position-relative z-1">
+                                        oct</p>
+                                </div>
+                            </div>
+                            <div class="p-5 bg-white">
+                                <h6 class="text-uppercase fs-5 fw-bold border-start border-danger ps-2 border-5 mb-3">
+                                    Audi R8 Night grass divide moveth
+                                </h6>
+                                <p class="ps-3 mb-4 text-secondary">
+                                    Were. Every forth one male man which. Brought won’t divide in. Hath gathering. Have.
+                                    Open fifth face shall land fish kind isn’t let can’t blessed multiply third light,
+                                    shall from winged, his creature isn’t midst said dominion in. Male firmament
+                                    beginning dominion fourth he place shall.
+                                </p>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <button
+                                            class="bg-white border-0 text-uppercase py-2 ms-4 position-relative read-more-btn w-100">
+                                            <span class="fs-very-sm position-relative z-1 text-white">read more</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div>
+                                            <ul
+                                                class="share-btn d-inline-block py-3 position-relative w-sm-50 w-100 d-flex gap-3   align-items-center position-relative z-0">
+                                                <li class="text-uppercase fs-very-sm text-white">share this</li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-brands fa-facebook"></i></span>
+                                                </li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-brands fa-x-twitter"></i></span>
+                                                </li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-solid fa-envelope"></i></span>
+                                                </li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-solid fa-plus"></i></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- blog 3 -->
+                    <div class="col-lg-8">
+                        <div class="shadow">
+                            <div class="position-relative">
+                                <img src="./assets/images/dodge.jpg" alt="" class="img-fluid">
+                                <div class="position-absolute date">
+                                    <p
+                                        class="text-white text-uppercase fs-sm m-0 pe-4 text-center position-relative z-1">
+                                        29</p>
+                                    <p
+                                        class="text-white text-uppercase fs-sm m-0 pe-3 text-center position-relative z-1">
+                                        jun</p>
+                                </div>
+                            </div>
+                            <div class="p-5 bg-white">
+                                <h6 class="text-uppercase fs-5 fw-bold border-start border-danger ps-2 border-5 mb-3">
+                                    dodge challenger Sarkness wherein you’re man also
+                                </h6>
+                                <p class="ps-3 mb-4 text-secondary">
+                                    Were. Every forth one male man which. Brought won’t divide in. Hath gathering. Have.
+                                    Open fifth face shall land fish kind isn’t let can’t blessed multiply third light,
+                                    shall from winged, his creature isn’t midst said dominion in. Male firmament
+                                    beginning dominion fourth he place shall.
+                                </p>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <button
+                                            class="bg-white border-0 text-uppercase py-2 ms-4 position-relative read-more-btn w-100">
+                                            <span class="fs-very-sm position-relative z-1 text-white">read more</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div>
+                                            <ul
+                                                class="share-btn d-inline-block py-3 position-relative w-sm-50 w-100 d-flex gap-3   align-items-center position-relative z-0">
+                                                <li class="text-uppercase fs-very-sm text-white">share this</li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-brands fa-facebook"></i></span>
+                                                </li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-brands fa-x-twitter"></i></span>
+                                                </li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-solid fa-envelope"></i></span>
+                                                </li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-solid fa-plus"></i></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- blog 4 -->
+                    <div class="col-lg-8">
+                        <div class="shadow">
+                            <div class="position-relative">
+                                <img src="./assets/images/ferrari-1.jpg" alt="" class="img-fluid">
+                                <div class="position-absolute date">
+                                    <p
+                                        class="text-white text-uppercase fs-sm m-0 pe-4 text-center position-relative z-1">
+                                        18</p>
+                                    <p
+                                        class="text-white text-uppercase fs-sm m-0 pe-3 text-center position-relative z-1">
+                                        dec</p>
+                                </div>
+                            </div>
+                            <div class="p-5 bg-white">
+                                <h6 class="text-uppercase fs-5 fw-bold border-start border-danger ps-2 border-5 mb-3">
+                                    ferrari Last Car News Summer
+                                </h6>
+                                <p class="ps-3 mb-4 text-secondary">
+                                    Were. Every forth one male man which. Brought won’t divide in. Hath gathering. Have.
+                                    Open fifth face shall land fish kind isn’t let can’t blessed multiply third light,
+                                    shall from winged, his creature isn’t midst said dominion in. Male firmament
+                                    beginning dominion fourth he place shall.
+                                </p>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <button
+                                            class="bg-white border-0 text-uppercase py-2 ms-4 position-relative read-more-btn w-100">
+                                            <span class="fs-very-sm position-relative z-1 text-white">read more</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div>
+                                            <ul
+                                                class="share-btn d-inline-block py-3 position-relative w-sm-50 w-100 d-flex gap-3   align-items-center position-relative z-0">
+                                                <li class="text-uppercase fs-very-sm text-white">share this</li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-brands fa-facebook"></i></span>
+                                                </li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-brands fa-x-twitter"></i></span>
+                                                </li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-solid fa-envelope"></i></span>
+                                                </li>
+                                                <li class="text-uppercase c-pointer text-white opacity-75">
+                                                    <span><i class="fa-solid fa-plus"></i></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="">
+        <!-- main footer -->
+        <div class="py-100 bg-footer position-relative">
+            <div class="container position-relative z-1">
+                <a class="navbar-brand d-flex justify-content-center footer-logo position-relative" href="#">
+                    <img src="./assets/images/big-logo-b.png" alt="Logo" width="100px"
+                        style="filter: invert(1); filter: brightness(100);">
+                </a>
+                <h6 class="text-white opacity-50 mt-5 text-center">: SHOWROOM LOCATION :</h6>
+                <p class="text-white text-center">32 Market St.128, Deeja Town, Florida, CA 12345</p>
+                <div class="row mt-4 gy-1">
+                    <!-- contact -->
+                    <div class="col-lg-3">
+                        <div>
+                            <p class="text-white text-center"><span class="opacity-50">PHONE:</span> +1 (234) 567 8900
+                            </p>
+                        </div>
+                    </div>
+                    <!-- fax -->
+                    <div class="col-lg-3">
+                        <div>
+                            <p class="text-white text-center"><span class="opacity-50">FAX:</span> +1 (234) 567 8900</p>
+                        </div>
+                    </div>
+                    <!-- email -->
+                    <div class="col-lg-3">
+                        <div>
+                            <p class="text-white text-center"><span class="opacity-50">EMAIL:</span> autozone@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <!-- hours -->
+                    <div class="col-lg-3">
+                        <div>
+                            <p class="text-white text-center"><span class="opacity-50">HOURS:</span> Mon – Fri :: 9am –
+                                6pm
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="m-0 p-0 d-flex mt-5 align-items-center justify-content-center gap-5">
+                    <li
+                        class="c-pointer footer-icon border border-2 opacity-50 d-flex justify-content-center align-items-center rounded-circle">
+                        <span class="fs-sm text-white hover-primary">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </span>
+                    </li>
+                    <li
+                        class="c-pointer footer-icon border border-2 opacity-50 d-flex justify-content-center align-items-center rounded-circle">
+                        <span class="fs-sm text-white hover-primary">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </span>
+                    </li>
+                    <li
+                        class="c-pointer footer-icon border border-2 opacity-50 d-flex justify-content-center align-items-center rounded-circle">
+                        <span class="fs-sm text-white hover-primary">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+                    </li>
+                    <li
+                        class="c-pointer footer-icon border border-2 opacity-50 d-flex justify-content-center align-items-center rounded-circle">
+                        <span class="fs-sm text-white hover-primary">
+                            <i class="fa-brands fa-youtube"></i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- sub footer -->
+        <div class="bg-white py-5 position-relative z-1 mt-5">
+            <div class="triangle position-absolute d-flex justify-content-center">
+                <div class="position-relative c-pointer" id="top-btn">
+                    <img src="./assets/images/triangle.png" width="50px" class="triangle-2">
+                    <p class="top-btn text-white position-absolute opacity-50">TOP</p>
+                </div>
+            </div>
+            <p class="text-center text-uppercase text-secondary fs-sm m-0 px-5">Copyright © 2024 Bootstrap Theme. All
+                Rights Reserved.
+            </p>
+            <span id="scrolltop-btn" class="display-none">
+                <img src="./assets/images/hover-car.png" alt="car image" width="100" class="car-img position-relative">
+            </span>
+        </div>
+    </footer>
+
+
+    <!-- bootstrap bundle js link -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- bootstrap popper js link -->
+    <script src="./assets/js/popper.min.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+    <!-- jquery js link -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // for 3d car image
+            $("#img-range").on("input", function () {
+                imgId = $(this).val();
+                $("#car-img").attr('src', `./assets/images/360 img/${imgId}.png`);
+            })
+            // for accordion
+            $('.acc-title').on('click', function () {
+                $clicked = $(this).next('.acc-body');
+                $clicked.slideToggle(500);
+                $('.acc-body').not($clicked).slideUp();
+            })
+            // scroll top
+            $('#top-btn').on('click', function () {
+                $('html').animate({ scrollTop: 0 }, 'smooth');
+            })
+            $('#scrolltop-btn').on('click', function () {
+                $('html').animate({ scrollTop: 0 }, 'smooth');
+            })
+            // sticky header
+            $(window).scroll(function () {
+                // Check the scroll position
+                if ($(this).scrollTop() > 100) {
+                    // Add 'sticky' class and set position to absolute
+                    $('header').removeClass('position-absolute')
+                    $('header').addClass('sticky-top')
+                    $('header').addClass('hero-bg')
+                    $('header').addClass('shadow')
+                    $('#sub-header').addClass('d-none')
+                } else {
+                    // Remove 'sticky' class and set position to absolute
+                    $('header').addClass('position-absolute')
+                    $('header').removeClass('sticky-top')
+                    $('header').removeClass('hero-bg')
+                    $('header').removeClass('shadow')
+                    $('#sub-header').removeClass('d-none')
+                }
+                if ($(window).scrollTop() > 150) {
+                    $('#scrolltop-btn').slideDown(500);
+                } else {
+                    $('#scrolltop-btn').slideUp(500);
+                }
+            });
+        });
+        $(window).on('load', function () {
+            // Add a class to the body to hide the preloader
+            $('#loader-wrapper').fadeOut();
+        });
+    </script>
+    <!-- swiper slider js link -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            autoplay: {
+                disableOnInteraction: false,
+            },
+            freeMode: true,
+            loop: true,
+            speed: 1500,
+        });
+    </script>
+    <!-- AOS Js script -->
+    <script src="./assets/js/aos.bundle.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
