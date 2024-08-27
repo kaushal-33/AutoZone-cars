@@ -509,9 +509,9 @@
                     $('#sub-header').removeClass('d-none')
                 }
                 if ($(window).scrollTop() > 150) {
-                    $('#scrolltop-btn').slideDown(500);
+                    $('#scrolltop-btn').addClass('translate-top');
                 } else {
-                    $('#scrolltop-btn').slideUp(500);
+                    $('#scrolltop-btn').removeClass('translate-top');
                 }
             });
         });

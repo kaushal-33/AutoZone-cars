@@ -702,7 +702,7 @@
             <p class="text-center text-uppercase text-secondary fs-sm m-0 px-5">Copyright © 2024 Bootstrap Theme. All
                 Rights Reserved.
             </p>
-            <span id="scrolltop-btn" class="display-none">
+            <span id="scrolltop-btn">
                 <img src="./assets/images/hover-car.png" alt="car image" width="100" class="car-img position-relative">
             </span>
         </div>
@@ -728,10 +728,11 @@
             })
             // scroll top
             $('#top-btn').on('click', function () {
-                $('html').animate({ scrollTop: 0 }, 'smooth');
+                $('html').animate({ scrollTop: 0 }, 1000, "linear");
             })
             $('#scrolltop-btn').on('click', function () {
-                $('html').animate({ scrollTop: 0 }, 'smooth');
+                $('html').animate({ scrollTop: 0 }, 1000, "linear");
+                $("#scrolltop-btn").addClass('top-animation');
             })
             // sticky header
             $(window).scroll(function () {
@@ -752,9 +753,9 @@
                     $('#sub-header').removeClass('d-none')
                 }
                 if ($(window).scrollTop() > 150) {
-                    $('#scrolltop-btn').slideDown(500);
+                    $('#scrolltop-btn').addClass('translate-top');
                 } else {
-                    $('#scrolltop-btn').slideUp(500);
+                    $('#scrolltop-btn').removeClass('translate-top');
                 }
             });
         });
